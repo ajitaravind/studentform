@@ -99,7 +99,7 @@ export default function StudentForm({ onSubmit }: { onSubmit: OnSubmit }) {
 		}));
 	};
 
-	const handleAddressChange = (type: string, field: string, value: string) => {
+	const handleAddressChange = (type: 'cur_address' | 'per_address', field: keyof FormData['cur_address'], value: string) => {
 		setFormData((prevData) => ({
 			...prevData,
 			[type]: {
