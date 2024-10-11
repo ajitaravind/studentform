@@ -15,6 +15,10 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectProps } from "@/components/ui/select";
+
+interface SelectPropsWithId extends SelectProps {
+	id: string;
+}
 import { Checkbox } from "@/components/ui/checkbox";
 import {
 	Card,
