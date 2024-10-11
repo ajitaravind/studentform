@@ -14,7 +14,17 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Select, SelectProps } from "@/components/ui/select";
+import { Select } from "@/components/ui/select";
+
+interface SelectProps {
+	id: string;
+	name: string;
+	value: string;
+	onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+	className: string;
+	required: boolean;
+	"aria-required": string;
+}
 
 interface SelectPropsWithId extends SelectProps {
 	id: string;
