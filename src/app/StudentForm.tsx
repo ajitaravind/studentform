@@ -26,7 +26,7 @@ import {
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-export default function ImprovedStudentProfileForm({ onSubmit }) {
+export default function StudentForm({ onSubmit }) {
 	const [formData, setFormData] = useState({
 		email: "",
 		first_name: "",
