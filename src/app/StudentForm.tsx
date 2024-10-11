@@ -26,8 +26,41 @@ import {
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-export default function StudentForm({ onSubmit }) {
-	const [formData, setFormData] = useState({
+type FormData = {
+	email: string;
+	first_name: string;
+	last_name: string;
+	birth_date: string;
+	phone_number: string;
+	nationality: string;
+	middle_name: string;
+	marital_status: string;
+	visa_details: string;
+	visa_start_date: string;
+	visa_end_date: string;
+	entry_date: string;
+	entry_airport: string;
+	cur_address: {
+		address1: string;
+		address2: string;
+		county: string;
+		state: string;
+		country: string;
+	};
+	per_address: {
+		address1: string;
+		address2: string;
+		county: string;
+		state: string;
+		country: string;
+	};
+	same_as_current: boolean;
+};
+
+type OnSubmit = (formData: FormData) => void;
+
+export default function StudentForm({ onSubmit }: { onSubmit: OnSubmit }) {
+	const [formData, setFormData] = useState<FormData>({
 		email: "",
 		first_name: "",
 		last_name: "",
@@ -66,7 +99,7 @@ export default function StudentForm({ onSubmit }) {
 		}));
 	};
 
-	const handleAddressChange = (type, field, value) => {
+	const handleAddressChange = (type: string, field: string, value: string) => {
 		setFormData((prevData) => ({
 			...prevData,
 			[type]: {
