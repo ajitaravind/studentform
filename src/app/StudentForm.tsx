@@ -91,7 +91,7 @@ export default function StudentForm({ onSubmit }: { onSubmit: OnSubmit }) {
 		same_as_current: false,
 	});
 
-	const handleChange = (e) => {
+	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
 		const { name, value } = e.target;
 		setFormData((prevData) => ({
 			...prevData,
@@ -109,7 +109,7 @@ export default function StudentForm({ onSubmit }: { onSubmit: OnSubmit }) {
 		}));
 	};
 
-	const handleSubmit = (e) => {
+	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		onSubmit(formData);
 	};
