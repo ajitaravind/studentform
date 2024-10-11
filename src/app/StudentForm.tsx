@@ -512,10 +512,11 @@ export default function StudentForm({ onSubmit }: { onSubmit: OnSubmit }) {
 											name="same_as_current"
 											checked={formData.same_as_current}
 											onCheckedChange={(checked) => {
+												const isChecked = !!checked; // Ensure it's a boolean
 												setFormData((prevData) => ({
 													...prevData,
-													same_as_current: checked,
-													per_address: checked
+													same_as_current: isChecked,
+													per_address: isChecked
 														? { ...prevData.cur_address }
 														: prevData.per_address,
 												}));
