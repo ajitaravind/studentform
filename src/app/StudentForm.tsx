@@ -25,10 +25,6 @@ interface SelectProps {
 	required: boolean;
 	"aria-required": string;
 }
-
-interface SelectPropsWithId extends SelectProps {
-	id: string;
-}
 import { Checkbox } from "@/components/ui/checkbox";
 import {
 	Card,
