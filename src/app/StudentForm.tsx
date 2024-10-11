@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Select } from "@/components/ui/select";
+import { Select, SelectProps } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import {
 	Card,
